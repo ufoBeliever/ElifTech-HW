@@ -212,7 +212,7 @@ body {
   height: 400px;
 }
 
-.choose-furniture {
+.create-account {
   width: 500px;
   height: 300px;
   display: -webkit-box;
@@ -256,7 +256,7 @@ input {
   font-size: 20px;
 }
 
-.choose-furniture-header {
+.account-header {
   font-family: "DM Sans";
   font-size: 30px;
   font-weight: bold;
