@@ -468,6 +468,10 @@ ol li, dd, dt {
   color: #696871;
 }
 
+.footer {
+  background-color: #dedede;
+}
+
 .footer-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -478,7 +482,6 @@ ol li, dd, dt {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   height: 100px;
-  background-color: #dedede;
 }
 
 .link {

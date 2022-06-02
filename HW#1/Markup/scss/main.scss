@@ -448,12 +448,15 @@ ol li, dd, dt{
   color: #696871;
 }
 
+.footer{
+  background-color: #dedede;
+}
+
 .footer-content{
   display: flex;
   align-items: center;
   justify-content: space-around;
   height: 100px;
-  background-color: #dedede;
 }
 
 .link{
