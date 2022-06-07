@@ -11,15 +11,15 @@ const obj = {
     counter: 0
 }
 
-module.exports = function func(delay, logDelay){
-    if(delay>=100000000)return
+module.exports = function func(delay){
+    if(delay>=100000)return
     setTimeout(()=>{
-        console.log('Hello World', logDelay)
+        console.log('Hello World', delay)
     }, delay)
     obj.counter++
     if(obj.counter>=5){
         obj.counter=0
-        return func(delay+logDelay+100, logDelay+100)
+        return func(delay+100)
     }
-    func(delay, logDelay)
+    func(delay)
 }

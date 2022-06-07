@@ -10,12 +10,12 @@
 * Обмеження: можна використовувати тільки const (без let і var)
 */
 
-module.exports = function func(delay, logDelay){
-    if(delay>=1000000000) return
+module.exports = function func(delay){
+    if(delay>=1000000) return
     setTimeout(()=>{
-        console.log(`Hello World. ${logDelay/1000}`)
+        console.log(`Hello World. ${delay/1000}`)
     }, delay)
-    return func(delay+logDelay+1000, logDelay+1000)
+    return func(delay+1000)
 }
 
 
