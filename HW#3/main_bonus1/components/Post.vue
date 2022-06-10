@@ -9,16 +9,21 @@
 </template>
 
 <script>
-export default {
+import { Component, Vue } from 'nuxt-property-decorator';
+
+export default @Component({
   name: 'PostComponent',
   props: {
     img: {
       type: String,
       required: true
     }
-  },
+  }
+})
+
+class PostComponent extends Vue {
   data () {
-    return {}
+    return {};
   }
 }
 </script>

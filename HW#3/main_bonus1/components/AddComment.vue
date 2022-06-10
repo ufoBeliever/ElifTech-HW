@@ -1,7 +1,7 @@
 <template>
   <form class="add-comment" @submit.prevent>
-    <input placeholder="Nickname" type="text" v-model="nickname">
-    <textarea placeholder="Comment" v-model="comment"></textarea>
+    <input v-model="nickname" placeholder="Nickname" type="text">
+    <textarea v-model="comment" placeholder="Comment" />
     <div>
       <input type="submit" value="Add Comment" @click="addComment">
       <input type="reset" value="Cancel">
@@ -10,8 +10,8 @@
 </template>
 
 <script>
-import { Component } from "nuxt-property-decorator"
-import Vue from 'vue'
+import { Component } from 'nuxt-property-decorator';
+import Vue from 'vue';
 
 export default @Component
 class AddComment extends Vue {
@@ -19,7 +19,7 @@ class AddComment extends Vue {
     return {
       nickname: '',
       comment: ''
-    }
+    };
   }
 
   addComment () {
@@ -27,9 +27,9 @@ class AddComment extends Vue {
       id: Date.now(),
       nickname: this.nickname,
       comment: this.comment
-    })
-    this.nickname = ''
-    this.comment = ''
+    });
+    this.nickname = '';
+    this.comment = '';
   }
 }
 </script>

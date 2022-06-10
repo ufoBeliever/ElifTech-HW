@@ -5,14 +5,22 @@ module.exports = {
     node: true
   },
   parserOptions: {
-    parser: '@babel/eslint-parser',
-    requireConfigFile: false
+    parser: 'babel-eslint'
   },
   extends: [
-    '@nuxtjs',
-    'plugin:nuxt/recommended'
+    '@nuxtjs'
+    // 'plugin:prettier/recommended'
   ],
-  plugins: [],
+  plugins: [
+    // 'prettier'
+  ],
   // add your custom rules here
-  rules: {}
-}
+  rules: {
+    indent: ['error', 2],
+    semi: ['error', 'always'],
+    'no-trailing-spaces': ['error', { skipBlankLines: true }],
+    'vue/html-indent': ['error', 2],
+    'vue/script-indent': ['error', 2],
+    'no-console': ['error', { allow: ['warn', 'error'] }]
+  }
+};

@@ -19,25 +19,29 @@
 </template>
 
 <script>
-export default {
-  name: 'LikesComponent',
+import Vue from 'vue';
+import { Component } from 'nuxt-property-decorator';
+
+export default @Component
+class LikesComponent extends Vue {
   data () {
     return {
       likes: 0
+    };
+  }
+
+  like () {
+    this.likes++;
+  }
+
+  dislike () {
+    if (!this.likes) {
+      return;
     }
-  },
-  methods: {
-    like () {
-      this.likes++
-    },
-    dislike () {
-      if (!this.likes) {
-        return
-      }
-      this.likes--
-    }
+    this.likes--;
   }
 }
+
 </script>
 
 <style scoped>

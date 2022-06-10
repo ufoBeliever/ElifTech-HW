@@ -1,26 +1,26 @@
 <template>
   <div class="app">
     <a href="/" class="back-button">ᐊ</a>
-    <AddComment @addCommentEvent = "addNewComment"></AddComment>
-    <comments-list :comments="comments"></comments-list>
+    <AddComment @addCommentEvent="addNewComment" />
+    <comments-list :comments="comments" />
   </div>
 </template>
 
 <script>
-import { Component } from "nuxt-property-decorator"
-import Vue from 'vue'
+import { Component } from 'nuxt-property-decorator';
+import Vue from 'vue';
 
 export default @Component
-class CommentsPage extends Vue{
+class CommentsPage extends Vue {
   data () {
     return {
       comments: []
-    }
-  }
-  addNewComment (comment) {
-    this.comments.push(comment)
+    };
   }
 
+  addNewComment (comment) {
+    this.comments.push(comment);
+  }
 }
 </script>
 

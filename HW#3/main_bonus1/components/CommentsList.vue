@@ -1,19 +1,19 @@
 <template>
   <div class="comments-list">
-      <div v-for="comment in comments" v-bind:key="comment.id" class="comments-wrapper">
-        <div class="comment">
-          <div class="comment-text">
-            {{comment.nickname}}:
-            {{comment.comment}}
-          </div>
+    <div v-for="comment in comments" :key="comment.id" class="comments-wrapper">
+      <div class="comment">
+        <div class="comment-text">
+          {{ comment.nickname }}:
+          {{ comment.comment }}
         </div>
       </div>
+    </div>
   </div>
 </template>
 
 <script>
-
-export default {
+import { Component, Vue } from 'nuxt-property-decorator';
+export default @Component({
   name: 'CommentsList',
   props: {
     comments: {
@@ -21,7 +21,9 @@ export default {
       required: true
     }
   }
-}
+})
+
+class CommentsList extends Vue {}
 
 </script>
 
