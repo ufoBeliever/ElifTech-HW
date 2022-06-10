@@ -6,8 +6,12 @@
 
 <script>
 import PostComponent from '~/components/Post'
-export default {
-  name: 'IndexPage',
+import { Component } from "nuxt-property-decorator"
+import Vue from 'vue'
+
+export default @Component({
   components: { PostComponent }
-}
+})
+
+class IndexPage extends Vue {}
 </script>

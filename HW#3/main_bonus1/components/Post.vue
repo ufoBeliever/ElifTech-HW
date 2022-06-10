@@ -1,7 +1,7 @@
 <template>
   <div class="post">
     <img :src="img" alt="Post image" class="main-img">
-    <Likes></Likes>
+    <Likes />
     <span class="comments-link">
       <a href="/comments" class="link">Comments</a>
     </span>

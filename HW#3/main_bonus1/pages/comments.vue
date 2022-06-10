@@ -7,18 +7,20 @@
 </template>
 
 <script>
-export default {
-  name: 'CommentsPage',
+import { Component } from "nuxt-property-decorator"
+import Vue from 'vue'
+
+export default @Component
+class CommentsPage extends Vue{
   data () {
     return {
       comments: []
     }
-  },
-  methods: {
-    addNewComment (comment) {
-      this.comments.push(comment)
-    }
   }
+  addNewComment (comment) {
+    this.comments.push(comment)
+  }
+
 }
 </script>
 

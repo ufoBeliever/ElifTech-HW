@@ -2,13 +2,19 @@
   <div class="likes">
     <button
       class="button"
-      @click="like">👍</button>
+      @click="like"
+    >
+      👍
+    </button>
 
-    {{likes}}
+    {{ likes }}
 
     <button
       class="button"
-      @click="dislike">👎</button>
+      @click="dislike"
+    >
+      👎
+    </button>
   </div>
 </template>
 

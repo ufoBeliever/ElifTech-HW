@@ -10,24 +10,26 @@
 </template>
 
 <script>
-export default {
-  name: 'AddComment',
+import { Component } from "nuxt-property-decorator"
+import Vue from 'vue'
+
+export default @Component
+class AddComment extends Vue {
   data () {
     return {
       nickname: '',
       comment: ''
     }
-  },
-  methods: {
-    addComment () {
-      this.$emit('addCommentEvent', {
-        id: Date.now(),
-        nickname: this.nickname,
-        comment: this.comment
-      })
-      this.nickname = ''
-      this.comment = ''
-    }
+  }
+
+  addComment () {
+    this.$emit('addCommentEvent', {
+      id: Date.now(),
+      nickname: this.nickname,
+      comment: this.comment
+    })
+    this.nickname = ''
+    this.comment = ''
   }
 }
 </script>

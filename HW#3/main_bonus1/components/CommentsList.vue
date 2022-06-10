@@ -12,6 +12,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'CommentsList',
   props: {
@@ -21,6 +22,7 @@ export default {
     }
   }
 }
+
 </script>
 
 <style scoped>
