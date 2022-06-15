@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="messageBox" placeholder="Type your message here"/>
+    <button id="send" title="Send Message!">Send Message</button>
+    <pre id="messages"></pre>
+
+    <script>
+        const sendBtn = document.querySelector('#send');
+        const messages = document.querySelector('#messages');
+        const messageBox = document.querySelector('#messageBox');
+
+        let ws;
+
+        function showMessage(message) {
+            messages.textContent += `\n\n${message}`;
+            messageBox.value = '';
+        }
+
+        function init() {
+            if (ws) {
+                ws.onerror = ws.onopen = ws.onclose = null;
+                ws.close();
+            }
+
+            ws = new WebSocket('ws://localhost:5000');
+            ws.onopen = () => {
+                console.log('Connection opened!');
+            }
+            ws.onmessage = ({ data }) => {
+                showMessage(JSON.parse(data));
+            }
+            ws.onclose = function() {
+                ws = null;
+            }
+        }
+
+        sendBtn.onclick = function() {
+            ws.send(messageBox.value);
+            showMessage(messageBox.value);
+        }
+
+        init();
+    </script>
+</body>
+</html>
