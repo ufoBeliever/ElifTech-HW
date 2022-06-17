@@ -17,11 +17,16 @@
         const messages = document.querySelector('#messages');
         const messageBox = document.querySelector('#messageBox');
 
+        let myLastMsg = ""
+
         let ws;
 
         function showMessage(message) {
-            messages.textContent += `\n\n${message}`;
-            messageBox.value = '';
+            if(myLastMsg!==message){
+                messages.textContent += `\n\n${message}`;
+                messageBox.value = '';
+            }
+            myLastMsg=""
         }
 
         function init() {
@@ -43,6 +48,7 @@
         }
 
         sendBtn.onclick = function() {
+            myLastMsg = messageBox.value
             ws.send(messageBox.value);
             showMessage(messageBox.value);
         }
