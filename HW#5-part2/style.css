@@ -1,0 +1,182 @@
+/*###################-RESET-############################*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*####################-MAIN-###########################*/
+
+.wrapper{
+    display: flex;
+    min-height: 100%;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+.container{
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+body{
+    background: #1C1C1E;
+    font-family: serif;
+    color: #D7D1B7;
+    font-weight: bold;
+}
+
+.main-header{
+    padding-top: 30px;
+}
+
+.header-text{
+    font-size: 35px;
+}
+
+.main-main{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.main-tank{
+    margin: 15px;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.main-tank:hover{
+    background: #2C2C2C;
+    cursor: pointer;
+}
+
+.main-tank-img{
+    width: 300px;
+}
+
+.main-tank-title{
+    font-size: 24px;
+}
+
+.main-tank-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.main-tank-country-img{
+    width: 30px;
+    margin-right: 10px;
+}
+
+.main-tank-title{
+    margin-right: 10px;
+}
+
+.details-header-content{
+    display: flex;
+    align-items: center;
+
+    font-size: 50px;
+    padding-top: 30px;
+    margin-bottom: 60px;
+}
+
+.details-header-img{
+    width: 60px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.tank-preview-title{
+    font-size: 24px;
+}
+
+.tank-preview-img{
+    width: 500px;
+}
+
+.tank-preview{
+    width: 40%;
+}
+
+.tank-characteristics{
+    width: 60%;
+}
+
+.tank-characteristics-title{
+    font-size: 24px;
+}
+
+.details-main-content{
+    display: flex;
+}
+
+table, td {
+    border: 1px solid;
+}
+table{
+    margin-top: 50px;
+    width: 100%;
+}
+
+td{
+    padding:10px;
+}
+
+a{
+    color: #9a9a9a;
+    text-decoration: none;
+}
+
+.to-list:hover{
+    text-decoration: underline;
+}
+
+.details-header-title{
+    margin-right: 20px;
+}
